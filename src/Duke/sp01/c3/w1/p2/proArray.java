@@ -1,4 +1,4 @@
-package Duke.sp01.c2.w1.p2;
+package Duke.sp01.c3.w1.p2;
 
 /**
  * Created by a on 1/27/17.

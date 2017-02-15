@@ -1,3 +1,5 @@
+package Duke.sp01.c3.w1.p2.PE;
+
 import edu.duke.*;
 /**
  * Keeps track of how many words from a file are of each possible length, 
@@ -12,8 +14,12 @@ public class WordLengths {
      * @parameter resource is the FileResource to read words from
      * @parameter counts is an array containing counts of each length, the indexes being the lengths
      */
-    public void countWordLengths(FileResource resource, int[] counts) {
+    public static void main(String[] args) {
+        testCountWordLengths();
+    }
+    public static void countWordLengths(FileResource resource, int[] counts) {
         // For every word in the file
+        int nmb = 0;
         for (String word : resource.words()) {
             int len = 0;
             // For every character in the word
@@ -33,29 +39,38 @@ public class WordLengths {
             } else {
                 counts[len]++;
             }
+            nmb ++;
+            System.out.println(nmb + ". " + len + " " + word);
         }
     }
-    
-    public void testCountWordLengths() {
-        FileResource resource = new FileResource();
+    public static void testCountWordLengths() {
+//        FileResource resource = new FileResource();
+//        FileResource resource = new FileResource("./data/data.Duke.sp01.c3.w1/smallHamlet.txt");
+        FileResource resource = new FileResource("./data/data.Duke.sp01.c3.w1/hamlet.txt");
+//        FileResource resource = new FileResource("./data/data.Duke.sp01.c3.w1/hamlet.txt");
+//        FileResource resource = new FileResource("./data/data.Duke.sp01.c3.w1/test01.txt");
+//        FileResource resource = new FileResource("./data/data.Duke.sp01.c3.w1/message2.txt");
         int[] counts = new int[31];
         countWordLengths(resource, counts);
         
         // Print information about the word lengths
+        int countAllWords = 0;
         System.out.println("Note this file has words that are:");
         for (int k = 0; k < counts.length; k++) {
             if (counts[k] > 0) {
                 System.out.println(counts[k] + " words of length " + k);
+                countAllWords += counts[k];
             }
         }
         System.out.println("The most common word length in the file is " + indexOfMax(counts));
+        System.out.println("countAllWords = " + countAllWords );
     }
     
     /**
      * Returns the index position of the largest element in values.
      * @parameter values is the array to search
      */
-    public int indexOfMax(int[] values) {
+    public static int indexOfMax(int[] values) {
         // Set max to the first index
         int max = 0; 
         // For every value after the first value,

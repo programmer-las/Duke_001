@@ -1,4 +1,4 @@
-package Duke.sp01.c2.w1.p2; /**
+package Duke.sp01.c3.w1.p2; /**
  * Simulate rolling two six-sided die, keep statistics
  * 
  * @author Duke Software Team
