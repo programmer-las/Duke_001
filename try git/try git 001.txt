@@ -1,4 +1,3 @@
 first try
-add "try git 001.txt" second try
-add "try git 001.txt" 3 try
-it's B"master"
+add new branch from TryGit001
+now I'm in nb2B_fromTryGit001
