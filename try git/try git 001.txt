@@ -1,3 +1,4 @@
 first try
 add "try git 001.txt" second try
 add "try git 001.txt" 3 try
+it's B"master"
