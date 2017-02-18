@@ -9,3 +9,6 @@ first
 second
 >>>>>>> #2
 #3
+=======
+#4
+forth
